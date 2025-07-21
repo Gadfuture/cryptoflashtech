@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Timer Button</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
         button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-        #timer { font-size: 24px; margin-top: 20px; }
         #message { margin-top: 20px; font-size: 18px; display: none; }
     </style>
 </head>
 <body>
-    <button onclick="startTimer()">Generate</button>
-    <div id="timer">10</div>
+    <button onclick="generateAction()">Generate</button>
     <div id="message"></div>
 
     <script>
-        let countdown;
-        function startTimer() {
-            let timeLeft = 10;
-            const timerDiv = document.getElementById('timer');
+        function generateAction() {
             const messageDiv = document.getElementById('message');
-            timerDiv.style.display = 'block';
-            messageDiv.style.display = 'none';
-
-            countdown = setInterval(() => {
-                timeLeft--;
-                timerDiv.textContent = timeLeft;
-                if (timeLeft <= 0) {
-                    clearInterval(countdown);
-                    timerDiv.style.display = 'none';
-                    messageDiv.style.display = 'block';
-                    messageDiv.innerHTML = 'Add Amount of 10,000<br>Contact us on: ' +
-                        '<a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> | ' +
-                        '<a href="mailto:support@example.com">Email</a> | ' +
-                        '<a href="https://t.me/yourtelegramhandle" target="_blank">Telegram</a>';
-                }
-            }, 1000);
+            messageDiv.style.display = 'block';
+            messageDiv.innerHTML = 'Add Amount of 10,000<br>Contact us on: ' +
+                '<a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> | ' +
+                '<a href="mailto:support@example.com">Email</a> | ' +
+                '<a href="https://t.me/yourtelegramhandle" target="_blank">Telegram</a>';
         }
     </script>
 </body>
