@@ -1,0 +1,85 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+header {
+  background: #1e1e1e;
+  padding: 30px 10px;
+  box-shadow: 0 0 20px #0ff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0ff;
+}
+
+.generator, .faq, .flyer {
+  padding: 30px 15px;
+  border-bottom: 1px solid #333;
+}
+
+h2 {
+  color: #ff0;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: lime;
+}
+
+.wallet {
+  background: #222;
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid lime;
+  color: lime;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.timer {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #0f0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+footer {
+  background: #000;
+  color: #aaa;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ff;
+  margin-top: 10px;
+}
