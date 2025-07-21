@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: #000;
     color: #fff;
-    background-image: url('https://images.unsplash.com/photo-1620131997660-eeebb6eefe51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://images.unsplash.com/photo-1620325867502-2216c5f8a9e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -39,6 +39,7 @@ header p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
 }
 
 section {
@@ -71,7 +72,7 @@ a:hover {
     text-decoration: underline;
 }
 
-button {
+button, .contact-button {
     background: #0ff;
     color: #000;
     border: none;
@@ -80,11 +81,20 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s;
+    display: inline-block;
+    margin: 10px;
 }
 
-button:hover {
+button:hover, .contact-button:hover {
     background: #00f;
     color: #fff;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 #generate-message {
@@ -124,7 +134,7 @@ footer {
         height: 40px;
     }
 
-    button {
+    button, .contact-button {
         padding: 10px 20px;
         font-size: 1em;
     }
