@@ -1,85 +1,161 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoFlashTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CryptoFlashTech</h1>
+    <p>Your source for secure, swappable Flash USDT.</p>
+  </header>
+
+  <section class="intro">
+    <h2>About Flash USDT</h2>
+    <p>
+      At CryptoFlashTech, we specialize in generating Flash USDT tokens including:
+      TRC20, ERC20, USDT on SOL, BNB, BTC, Teller (BEP20), BTCBR (BEP20), and USDT.z.
+      Each Flash USDT is valid for 180 days and can be swapped, sent to any wallet, and used for trading and DeFi.
+      Our platform uses secure blockchain protocols, enabling users to acquire Flash tokens quickly and affordably. 
+      Once generated, tokens can be used for trading, staking, or as digital assets.
+    </p>
+  </section>
+
+  <section class="quote">
+    <h2>Quote of the Day</h2>
+    <blockquote>
+      "Cryptocurrency is the future of money — be early, be smart, be brave."
+    </blockquote>
+  </section>
+
+  <section class="crypto-basics">
+    <h2>How Cryptocurrency Works in Trading and Stocks</h2>
+    <p>
+      Cryptocurrency operates on blockchain technology, offering secure, decentralized financial systems.
+      When trading crypto, you speculate on its price using exchanges or derivatives. 
+      Investors can use tokens to trade against fiat currencies or other cryptos. 
+      In stock trading, profits come from company shares, but in crypto, you profit from price volatility and market movement. 
+      Crypto trading also includes DeFi applications, NFTs, and smart contract-based earnings. 
+    </p>
+  </section>
+
+  <section class="generator">
+    <h2>Generate Flash USDT</h2>
+    <p>
+      Minimum generation: <strong>10,000 Flash</strong><br>
+      Gas fee: <strong>$320 via TRX</strong><br>
+      Send screenshot to: <br>
+      <strong>Email:</strong> crypto.flash.tech@gmail.com<br>
+      <strong>WhatsApp:</strong> +254798373493<br>
+      <strong>Telegram:</strong> @hitmangad
+    </p>
+    <button id="generateButton">Generate Flash</button>
+    <p id="timerText"></p>
+  </section>
+
+  <section class="faq">
+    <h2>FAQs</h2>
+    <ul>
+      <li><strong>What tokens are supported?</strong> TRC20, ERC20, SOL, BNB, BTC, BTCBR BEP20, Teller BEP20, USDT.z</li>
+      <li><strong>How long are Flash tokens valid?</strong> 180 days</li>
+      <li><strong>Are Flash tokens swappable?</strong> Yes, they can be swapped and sent to any wallet.</li>
+      <li><strong>How do I pay?</strong> Send TRX to TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</li>
+      <li><strong>What happens after payment?</strong> Send a screenshot and once confirmed, you'll receive your Flash. After confirmation, pay 15% fee.</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: crypto.flash.tech@gmail.com</p>
+    <p>WhatsApp: +254798373493</p>
+    <p>TikTok: @crypto.flash.tech</p>
+  </section>
+
+  <section class="flyer">
+    <h2>Our Flyer</h2>
+    <img src="flyer.png" alt="CryptoFlash Flyer" />
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CryptoFlashTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById('generateButton');
+    const timerText = document.getElementById('timerText');
+
+    button.addEventListener('click', () => {
+      let seconds = 10;
+      timerText.innerText = `Generating Flash... ${seconds}s remaining`;
+      const interval = setInterval(() => {
+        seconds--;
+        if (seconds > 0) {
+          timerText.innerText = `Generating Flash... ${seconds}s remaining`;
+        } else {
+          clearInterval(interval);
+          timerText.innerText = 'Flash ready. Contact us with your screenshot to proceed.';
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+
 /* style.css */
 body {
+  background: #000;
+  color: #00ffe7;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #111;
-  color: #f2f2f2;
-  text-align: center;
 }
 
 header {
-  background: #1e1e1e;
-  padding: 30px 10px;
-  box-shadow: 0 0 20px #0ff;
+  background: #111;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #00ffe7;
 }
 
 h1 {
   font-size: 2.5rem;
-  color: #0ff;
 }
 
-.generator, .faq, .flyer {
-  padding: 30px 15px;
-  border-bottom: 1px solid #333;
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-h2 {
-  color: #ff0;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-p, ul {
+button {
+  background: #00ffe7;
+  color: #000;
+  padding: 1rem 2rem;
+  border: none;
   font-size: 1rem;
-  line-height: 1.6;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li::before {
-  content: "✔ ";
-  color: lime;
-}
-
-.wallet {
-  background: #222;
-  padding: 5px 10px;
-  display: inline-block;
-  border: 1px solid lime;
-  color: lime;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.timer {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #0f0;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+button:hover {
+  background: #00cccc;
 }
 
 footer {
-  background: #000;
-  color: #aaa;
-  padding: 20px 10px;
+  background: #111;
+  text-align: center;
+  padding: 1rem;
   font-size: 0.9rem;
+  border-top: 1px solid #00ffe7;
 }
 
 img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #0ff;
-  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
 }
