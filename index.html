@@ -3,161 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto FlashTech - Flash USDT Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Countdown Timer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #timer { font-size: 24px; margin-top: 20px; }
+        #message { margin-top: 20px; font-size: 18px; display: none; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Crypto FlashTech</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#future">Future of Crypto</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <h1>Introducing Flash USDT by Crypto FlashTech</h1>
-        <p>Crypto FlashTech pioneers Flash USDT generation, offering a revolutionary approach to cryptocurrency transactions. Flash USDT is a time-limited digital asset designed for secure, fast, and reliable transfers across blockchain networks. Issued under original contracts, our tokens ensure authenticity and compliance. Generate USDT on TRC20, ERC20, Solana, BNB, and BEP20 networks, or BTCBR on BEP20, with a 180-day validity. With a minimum generation fee of $10,000, an upfront payment of $320, and a 15% confirmation fee, our platform guarantees security and transparency for traders and investors.</p>
-        <a href="#generator" class="cta-button">Generate Flash USDT Now</a>
-        <div class="floating-icons">
-            <i class="fab quan fa-bitcoin"></i>
-            <i class="fab quan fa-ethereum"></i>
-            <i class="fab quan fa-btc"></i>
-            <i class="fas quan fa-coins"></i>
-        </div>
-    </section>
-
-    <section id="future">
-        <h2>Future of Cryptocurrency</h2>
-        <p>The cryptocurrency landscape is evolving rapidly, with 2025 poised to be a transformative year. Decentralized finance (DeFi) and stablecoins like USDT are driving mainstream adoption, offering stability and scalability. Flash USDT, with its time-bound validity, is set to redefine transactional efficiency in trading and remittances. Blockchain interoperability and layer-2 solutions will enhance transaction speeds and reduce costs, making crypto more accessible. Additionally, advancements in quantum-resistant cryptography will bolster security, ensuring trust in digital assets. As regulatory frameworks mature, expect increased institutional investment, further legitimizing the market. Crypto FlashTech is at the forefront, leveraging these trends to deliver innovative solutions for the future.</p>
-    </section>
-
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What is the minimum generation fee?</h3>
-            <p>The minimum generation fee for Flash USDT is $10,000.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How much is the initial payment?</h3>
-            <p>Clients are required to pay $320 to generate Flash USDT.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What is the confirmation fee?</h3>
-            <p>After confirmation, clients pay a 15% fee.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How long are Flash tokens valid?</h3>
-            <p>Flash tokens are valid for 180 days.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Which tokens can be generated?</h3>
-            <p>We support USDT on TRC20, ERC20, Solana, BNB, and BEP20, as well as BTCBR on BEP20.</p>
-        </div>
-    </section>
-
-    <section id="generator">
-        <h2>Flash USDT Generator</h2>
-        <p id="generator-message">Confirm your generating fee on WhatsApp to start generating Flash USDT.</p>
-        <div id="timer">30:00</div>
-        <a href="https://wa.me/+25498373493?text=Confirming%20generating%20fee%20for%20Flash%20USDT" target="_blank" class="cta-button" id="generate-button">Generate Now</a>
-    </section>
-
-    <section id="chart">
-        <h2>Cryptocurrency Market Trends</h2>
-        <canvas id="cryptoChart"></canvas>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Reach out to us for support or inquiries:</p>
-        <div class="contact-buttons">
-            <a href="https://wa.me/+25498373493" target="_blank" class="contact-button whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="https://t.me/hitmangad" target="_blank" class="contact-button telegram"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="mailto:crypto.flashtech@gmail.com" class="contact-button email"><i class="fas fa-envelope"></i> Email</a>
-        </div>
-        <p>After payment via TRX to <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong>, send a screenshot for confirmation to our email or WhatsApp.</p>
-    </section>
-
-    <footer>
-        <p>© 2025 Crypto FlashTech. All rights reserved.</p>
-    </footer>
-
-    <div class="global-floating-icons">
-        <i class="fab quan fa-bitcoin"></i>
-        <i class="fab quan fa-ethereum"></i>
-        <i class="fab quan fa-btc"></i>
-        <i class="fas quan fa-coins"></i>
-    </div>
+    <button onclick="startTimer()">Generate</button>
+    <div id="timer">10</div>
+    <div id="message"></div>
 
     <script>
-        // Timer for Flash USDT Generator
-        let timeLeft = 1800; // 30 minutes in seconds
-        const timerElement = document.getElementById('timer');
-        const generatorMessage = document.getElementById('generator-message');
-        const generateButton = document.getElementById('generate-button');
-        const timer = setInterval(() => {
-            let minutes = Math.floor(timeLeft / 60);
-            let seconds = timeLeft % 60;
-            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            timeLeft--;
-            if (timeLeft < 0) {
-                clearInterval(timer);
-                timerElement.textContent = 'Time Expired';
-            }
-        }, 1000);
+        let countdown;
+        function startTimer() {
+            let timeLeft = 10;
+            const timerDiv = document.getElementById('timer');
+            const messageDiv = document.getElementById('message');
+            timerDiv.style.display = 'block';
+            messageDiv.style.display = 'none';
 
-        // Update message on button click
-        generateButton.addEventListener('click', () => {
-            generatorMessage.textContent = 'Confirm generating payment, send the screenshot to WhatsApp or email, and your address.';
-        });
-
-        // Chart.js for crypto price trends
-        const ctx = document.getElementById('cryptoChart').getContext('2d');
-        const cryptoChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'USDT Price (USD)',
-                    data: [1.00, 1.01, 0.99, 1.00, 1.02, 1.01],
-                    borderColor: '#00ff88',
-                    backgroundColor: 'rgba(0, 255, 136, 0.2)',
-                    fill: true,
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        title: {
-                            display: true,
-                            text: 'Price (USD)',
-                            color: '#fff'
-                        },
-                        ticks: { color: '#fff' }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Month',
-                            color: '#fff'
-                        },
-                        ticks: { color: '#fff' }
-                    }
-                },
-                plugins: {
-                    legend: { labels: { color: '#fff' } }
+            countdown = setInterval(() => {
+                timeLeft--;
+                timerDiv.textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    timerDiv.style.display = 'none';
+                    messageDiv.style.display = 'block';
+                    messageDiv.innerHTML = 'Add Amount of 10,000<br>Contact us on: ' +
+                        '<a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> | ' +
+                        '<a href="mailto:support@example.com">Email</a> | ' +
+                        '<a href="https://t.me/yourtelegramhandle" target="_blank">Telegram</a>';
                 }
-            }
-        });
+            }, 1000);
+        }
     </script>
 </body>
 </html>
