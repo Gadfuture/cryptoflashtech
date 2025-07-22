@@ -3,58 +3,135 @@ body {
     font-family: 'Arial', sans-serif;
     background: #000;
     color: #fff;
-    background-image: url('https://images.unsplash.com/photo-1620325867502-2216c5f8a9e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://images.unsplash.com/photo-1642427745967-044db3c9e2d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.float-symbol {
+    position: absolute;
+    width: 50px;
+    height: animation-duration: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    animation: float 10s infinite ease-in-out;
+}
+
+.float-symbol:nth منبع: nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.float-symbol:nth-child(2) {
+    top: 20%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.float-symbol:nth-child(3) {
+    top: 50%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.float-symbol:nth-child(4) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50px) rotate(10deg); }
+}
+
+header, section, footer {
+    background: rgba(0, 0, 0, 0.7) url('https://images.unsplash.com/photo-1624969862702-3f3beb20a020?ixlib=rb-4.0.3&auto=format&fit=100&w=1920&q=80') center/cover no-repeat;
+    background-blend-mode: overlay;
+    position: relative;
+    z-index: 1;
 }
 
 header {
     text-align: center;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 0;
-    text-shadow: 0 0 10px #00f;
+    text-shadow: 0 0 10px #00ccff;
 }
 
 header p {
     font-size: 1.2em;
-    color: #0ff;
+    color: #00ff99;
 }
 
 #crypto-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     padding: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .crypto-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 255, 153, 0.7));
+}
+
+#crypto-gallery {
+    text-align: center;
+}
+
+.crypto-gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.crypto-gallery-images img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 153, 0.5));
 }
 
 section {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.8);
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
 }
 
 h2 {
-    color: #0ff;
-    text-shadow: 0 0 5px #00f;
+    color: #00ff99;
+    text-shadow: 0 0 5px #00ccff;
 }
 
 p, a {
@@ -64,7 +141,7 @@ p, a {
 }
 
 a {
-    color: #0ff;
+    color: #00ff99;
     text-decoration: none;
 }
 
@@ -73,7 +150,7 @@ a:hover {
 }
 
 button, .contact-button {
-    background: #0ff;
+    background: #00ff99;
     color: #000;
     border: none;
     padding: 15px 30px;
@@ -86,7 +163,7 @@ button, .contact-button {
 }
 
 button:hover, .contact-button:hover {
-    background: #00f;
+    background: #00ccff;
     color: #fff;
 }
 
@@ -95,6 +172,13 @@ button:hover, .contact-button:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+#timer {
+    font-size: 2em;
+    color: #00ff99;
+    text-shadow: 0 0 5px #00ccff;
+    margin-top: 20px;
 }
 
 #generate-message {
@@ -106,14 +190,13 @@ button:hover, .contact-button:hover {
 }
 
 .faq-item h3 {
-    color: #0ff;
+    color: #00ff99;
     margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
@@ -130,12 +213,26 @@ footer {
     }
 
     .crypto-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .crypto-gallery-images img {
         width: 40px;
         height: 40px;
+    }
+
+    .float-symbol {
+        width: 30px;
+        height: 30px;
     }
 
     button, .contact-button {
         padding: 10px 20px;
         font-size: 1em;
+    }
+
+    #timer {
+        font-size: 1.5em;
     }
 }
