@@ -13,6 +13,8 @@
         <div class="float-symbol" style="background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png')"></div>
         <div class="float-symbol" style="background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png')"></div>
         <div class="float-symbol" style="background-image: url('https://cryptologos.cc/logos/binance-coin-bnb-logo.png')"></div>
+        <div class="float-symbol" style="background-image: url('https://cryptologos.cc/logos/solana-sol-logo.png')"></div>
+        <div class="float-symbol" style="background-image: url('https://cryptologos.cc/logos/cardano-ada-logo.png')"></div>
     </div>
 
     <header>
@@ -20,20 +22,25 @@
         <p>Innovative Flash USDT Solutions</p>
     </header>
 
+    <section id="available-tokens">
+        <h2>Available Flash Tokens and Coins</h2>
+        <div class="token-list">
+            <div class="token-item">USDT TRC20</div>
+            <div class="token-item">USDT ERC20</div>
+            <div class="token-item">SOL USDT</div>
+            <div class="token-item">BTC</div>
+            <div class="token-item">USDT.Z</div>
+            <div class="token-item">BNB USDT</div>
+            <div class="token-item">Teller BEP20</div>
+            <div class="token-item">BTCBR BEP20</div>
+        </div>
+    </section>
+
     <section id="crypto-icons">
         <div class="crypto-icon" style="background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png')"></div>
         <div class="crypto-icon" style="background-image: url('https://cryptologos.cc/logos/bitcoin-btc-logo.png')"></div>
         <div class="crypto-icon" style="background-image: url('https://cryptologos.cc/logos/solana-sol-logo.png')"></div>
         <div class="crypto-icon" style="background-image: url('https://cryptologos.cc/logos/binance-coin-bnb-logo.png')"></div>
-    </section>
-
-    <section id="crypto-gallery">
-        <h2>Our Supported Cryptocurrencies</h2>
-        <div class="crypto-gallery-images">
-            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum">
-            <img src="https://cryptologos.cc/logos/ripple-xrp-logo.png" alt="Ripple">
-            <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="Cardano">
-        </div>
     </section>
 
     <section id="about">
@@ -43,15 +50,16 @@
 
     <section id="generate">
         <h2>Generate Flash USDT</h2>
-        <p>Click below to generate Flash USDT (minimum 10,000).</p>
-        <button onclick="startTimer()">Generate Now</button>
+        <p>Enter the amount of Flash USDT to generate (minimum 10,000).</p>
+        <input type="number" id="amount-input" class="amount-input" placeholder="Enter amount (min 10,000)" min="10000">
+        <button onclick="startTimer()" class="generate-button">Generate Now</button>
         <div id="timer" style="display: none;">10</div>
         <div id="generate-message" style="display: none;"></div>
     </section>
 
     <section id="how-crypto-works">
         <h2>How Cryptocurrency Works in Trading and Stocks</h2>
-        <p>Cryptocurrency trading involves buying, selling, or exchanging digital assets like Bitcoin, Ethereum, or Flash USDT on platforms such as Binance, Coinbase, or KuCoin. Unlike traditional stocks, which are traded on centralized exchanges like the NYSE or NASDAQ with fixed hours, crypto markets operate 24/7, offering continuous opportunities for traders worldwide. Cryptocurrencies are built on blockchain technology, a decentralized ledger that records transactions securely without intermediaries like banks. This decentralization enables peer-to-peer transfers, reducing costs and increasing speed. For example, Flash USDT, a stablecoin pegged to the US dollar, minimizes volatility risks, making it ideal for traders seeking stability in fast-paced markets. Traders use technical analysis—charts, indicators like RSI, and candlestick patterns—to predict price movements, capitalizing on volatility for profit. They may buy low and sell high or engage in derivatives trading, such as futures or options, to hedge risks or amplify知道 gains.</p>
+        <p>Cryptocurrency trading involves buying, selling, or exchanging digital assets like Bitcoin, Ethereum, or Flash USDT on platforms such as Binance, Coinbase, or KuCoin. Unlike traditional stocks, which are traded on centralized exchanges like the NYSE or NASDAQ with fixed hours, crypto markets operate 24/7, offering continuous opportunities for traders worldwide. Cryptocurrencies are built on blockchain technology, a decentralized ledger that records transactions securely without intermediaries like banks. This decentralization enables peer-to-peer transfers, reducing costs and increasing speed. For example, Flash USDT, a stablecoin pegged to the US dollar, minimizes volatility risks, making it ideal for traders seeking stability in fast-paced markets. Traders use technical analysis—charts, indicators like RSI, and candlestick patterns—to predict price movements, capitalizing on volatility for profit. They may buy low and sell high or engage in derivatives trading, such as futures or options, to hedge risks or amplify gains.</p>
         <p>In contrast, stock trading relies on fundamental analysis, evaluating company performance, earnings reports, and market conditions. Stocks represent ownership in a company, offering dividends or capital gains, while cryptocurrencies derive value from market demand, utility, or, in the case of stablecoins like Flash USDT, their peg to fiat currency. Crypto trading also includes unique strategies like yield farming, where users lock assets in DeFi protocols to earn rewards, or staking, where tokens are held to support network operations for interest-like returns. Flash USDT’s 180-day validity makes it a versatile tool for such strategies, as it can be swapped across chains or used in trading pairs on decentralized exchanges (DEXs) like Uniswap.</p>
         <p>Risks in crypto trading include high volatility, regulatory changes, and security threats like hacks, while stocks face market corrections or company-specific risks. Crypto’s global accessibility allows anyone with an internet connection to participate, unlike stocks, which often require brokers or regional access. Flash USDT’s stability makes it a preferred choice for traders avoiding crypto’s wild price swings, serving as a safe haven during market downturns. However, both markets require risk management—diversification, stop-loss orders, and staying informed about trends. Crypto’s integration with DeFi also offers opportunities absent in stocks, like lending tokens for interest or providing liquidity for fees. For instance, Flash USDT can be used in liquidity pools to earn passive income, a feature stocks lack. Understanding market dynamics, whether through technical indicators for crypto or earnings reports for stocks, is crucial for success in either domain.</p>
     </section>
@@ -64,7 +72,7 @@
         </div>
         <div class="faq-item">
             <h3>How do I generate Flash USDT?</h3>
-            <p>Click the "Generate Now" button to start the timer, then contact us via WhatsApp (+254798373493) or email (crypto.flash.tech@gmail.com) to proceed with generating a minimum of 10,000 Flash USDT.</p>
+            <p>Enter an amount (minimum 10,000) in the input field, click "Generate Now" to start the timer, then contact us via WhatsApp (+254798373493) or email (crypto.flash.tech@gmail.com) to proceed.</p>
         </div>
         <div class="faq-item">
             <h3>Which blockchains support Flash USDT?</h3>
@@ -107,21 +115,29 @@
 
         let countdown;
         function startTimer() {
-            let timeLeft = 10;
+            const amountInput = document.getElementById('amount-input').value;
             const timerDiv = document.getElementById('timer');
             const messageDiv = document.getElementById('generate-message');
+
+            if (amountInput < 10000) {
+                messageDiv.style.display = 'block';
+                messageDiv.innerHTML = 'Please enter an amount of at least 10,000 Flash USDT.';
+                return;
+            }
+
+            let timeLeft = 10;
             timerDiv.style.display = 'block';
             messageDiv.style.display = 'none';
 
-            clearInterval(countdown); // Clear any existing countdown
-            countdown处理的 = setInterval(() => {
+            clearInterval(countdown);
+            countdown = setInterval(() => {
                 timeLeft--;
                 timerDiv.textContent = timeLeft;
                 if (timeLeft <= 0) {
                     clearInterval(countdown);
                     timerDiv.style.display = 'none';
                     messageDiv.style.display = 'block';
-                    messageDiv.innerHTML = 'To generate a minimum of 10,000 Flash USDT, please contact us via <a href="https://wa.me/+254798373493" target="_blank">WhatsApp (+254798373493)</a> or <a href="mailto:crypto.flash.tech@gmail.com">email (crypto.flash.tech@gmail.com)</a> for further instructions.';
+                    messageDiv.innerHTML = `To generate ${amountInput} Flash USDT, please contact us via <a href="https://wa.me/+254798373493" target="_blank">WhatsApp (+254798373493)</a> or <a href="mailto:crypto.flash.tech@gmail.com">email (crypto.flash.tech@gmail.com)</a> for further instructions.`;
                 }
             }, 1000);
         }
