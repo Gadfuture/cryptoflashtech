@@ -151,22 +151,13 @@ section {
 .global-floating-icons i:nth-child(7) { animation-delay: 5s; left: 60%; top: 30%; }
 .global-floating-icons i:nth-child(8) { animation-delay: 7s; left: 80%; top: 40%; }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotateX(0deg) rotateZ(0deg); }
-    50% { transform: translateY(-30px) rotateX(15deg) rotateZ(10deg); }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
-    50% { transform: translateY(-20px) rotateX(20deg) rotateY(10deg); }
-}
-
 .token-boxes {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .token-box {
@@ -178,7 +169,15 @@ section {
     color: #00ff88;
     text-shadow: 0 0 5px #00ff88;
     transform-style: preserve-3d;
-    animation: bounce 2s infinite;
+    white-space: nowrap;
+}
+
+.generator {
+    width: 100%;
+    padding: 20px;
+    background: rgba(15, 15, 26, 0.8);
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -269,4 +268,54 @@ footer {
     padding: 20px;
     text-align: center;
     border-top: 1px solid #00ff88;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .token-boxes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .token-box {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .generator {
+        padding: 10px;
+    }
+    #generator-message, #generator #timer, #payment-container p {
+        font-size: 1rem;
+    }
+    #amount-input {
+        width: 100%;
+        max-width: 200px;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    #chart canvas {
+        max-width: 100%;
+    }
 }
