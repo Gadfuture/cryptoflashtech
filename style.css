@@ -156,6 +156,31 @@ section {
     50% { transform: translateY(-30px) rotateX(15deg) rotateZ(10deg); }
 }
 
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateY(-20px) rotateX(20deg) rotateY(10deg); }
+}
+
+.token-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.token-box {
+    background: rgba(15, 15, 26, 0.8);
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid #00ff88;
+    font-size: 1.2rem;
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+    transform-style: preserve-3d;
+    animation: bounce 2s infinite;
+}
+
 h2 {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
@@ -198,20 +223,6 @@ p {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 20px;
-}
-
-.available-tokens {
-    margin: 20px 0;
-    background: rgba(15, 15, 26, 0.8);
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #00ff88;
-}
-
-.available-tokens h3 {
-    margin: 0 0 10px;
-    color: #00ff88;
-    text-shadow: 0 0 5px #00ff88;
 }
 
 .contact-buttons {
