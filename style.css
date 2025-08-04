@@ -8,6 +8,18 @@ body {
     overflow-x: hidden;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
 header {
     background: rgba(15, 15, 26, 0.8);
     padding: 1rem 0;
@@ -93,10 +105,12 @@ section {
     font-weight: bold;
     font-size: 1.2rem;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    transform-style: preserve-3d;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
+    transform: translateZ(10px) scale(1.05);
     box-shadow: 0 0 15px #00ff88;
 }
 
@@ -132,22 +146,14 @@ section {
 .global-floating-icons i:nth-child(2) { animation-delay: 2s; left: 35%; top: 35%; }
 .global-floating-icons i:nth-child(3) { animation-delay: 4s; left: 55%; top: 45%; }
 .global-floating-icons i:nth-child(4) { animation-delay: 6s; left: 75%; top: 55%; }
+.global-floating-icons i:nth-child(5) { animation-delay: 1s; left: 20%; top: 60%; }
+.global-floating-icons i:nth-child(6) { animation-delay: 3s; left: 40%; top: 70%; }
+.global-floating-icons i:nth-child(7) { animation-delay: 5s; left: 60%; top: 30%; }
+.global-floating-icons i:nth-child(8) { animation-delay: 7s; left: 80%; top: 40%; }
 
 @keyframes float {
     0%, 100% { transform: translateY(0) rotateX(0deg) rotateZ(0deg); }
     50% { transform: translateY(-30px) rotateX(15deg) rotateZ(10deg); }
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    pointer-events: none;
 }
 
 h2 {
@@ -222,10 +228,12 @@ p {
     font-weight: bold;
     font-size: 1.1rem;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    transform-style: preserve-3d;
 }
 
 .contact-button:hover {
-    transform: translateY(-3px);
+    transform: translateZ(10px) scale(1.05);
     box-shadow: 0 0 15px #00ff88;
 }
 
