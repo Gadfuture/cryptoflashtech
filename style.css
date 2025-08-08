@@ -7,13 +7,17 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(45deg, #0a0a0a, #111, #0a0a0a);
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover fixed;
     color: #fff;
     line-height: 1.6;
     scroll-behavior: smooth;
     perspective: 1000px; /* Adds 3D perspective to the entire body */
     overflow-x: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 body::before {
@@ -23,8 +27,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-    opacity: 0.2;
+    background: rgba(0, 0, 0, 0.6); /* Overlay for readability */
     z-index: -1;
     transform: rotateX(10deg) translateZ(-50px); /* 3D tilt effect */
     animation: bgPulse 10s infinite alternate;
@@ -43,13 +46,16 @@ header {
     top: 0;
     z-index: 1000;
     border-bottom: 2px solid #00ff88;
+    width: 100%;
+    text-align: center;
     transform: translateZ(20px); /* 3D lift effect */
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
@@ -80,8 +86,8 @@ nav ul li a:hover {
 .hero {
     padding: 50px 20px;
     text-align: center;
-    background: transparent; /* Removed gradient to let 3D background shine */
-    position: relative;
+    width: 100%;
+    max-width: 800px;
     transform: translateZ(10px); /* Slight 3D lift */
 }
 
@@ -93,8 +99,8 @@ nav ul li a:hover {
 }
 
 .hero p {
-    max-width: 800px;
-    margin: auto;
+    max-width: 600px;
+    margin: 0 auto 20px;
     font-size: 1rem;
     color: #ccc;
 }
@@ -102,6 +108,8 @@ nav ul li a:hover {
 /* Token Boxes */
 .availability-box {
     margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
     transform: translateZ(5px); /* 3D effect */
 }
 
@@ -138,6 +146,7 @@ nav ul li a:hover {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     transform: translateZ(10px); /* 3D lift */
     /* Removed border to eliminate frame */
 }
@@ -162,7 +171,7 @@ nav ul li a:hover {
 }
 
 /* Floating Crypto Icons */
-.floating-icons, .global-floating-icons {
+.floating-icons {
     position: absolute;
     top: 0;
     left: 0;
@@ -172,14 +181,14 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.floating-icons img, .global-floating-icons img {
+.floating-icons img {
     position: absolute;
     opacity: 0.7;
     transition: transform 0.3s ease;
     animation: float 6s infinite;
 }
 
-.floating-icons img:hover, .global-floating-icons img:hover {
+.floating-icons img:hover {
     transform: rotateY(20deg) scale(1.1);
 }
 
@@ -190,13 +199,6 @@ nav ul li a:hover {
 .floating-icons img:nth-child(5) { left: 85%; top: 60%; animation-duration: 22s; width: 40px; }
 .floating-icons img:nth-child(6) { left: 15%; top: 70%; animation-duration: 30s; width: 50px; }
 
-.global-floating-icons img:nth-child(1) { left: 15%; top: 25%; animation-duration: 18s; width: 60px; }
-.global-floating-icons img:nth-child(2) { left: 30%; top: 35%; animation-duration: 25s; width: 45px; }
-.global-floating-icons img:nth-child(3) { left: 45%; top: 45%; animation-duration: 20s; width: 55px; }
-.global-floating-icons img:nth-child(4) { left: 60%; top: 55%; animation-duration: 28s; width: 50px; }
-.global-floating-icons img:nth-child(5) { left: 20%; top: 60%; animation-duration: 22s; width: 40px; }
-.global-floating-icons img:nth-child(6) { left: 40%; top: 70%; animation-duration: 30s; width: 50px; }
-
 @keyframes float {
     0%, 100% { transform: translateY(0) rotateX(0deg); }
     50% { transform: translateY(-20px) rotateX(15deg); }
@@ -206,6 +208,8 @@ nav ul li a:hover {
 #faq {
     padding: 40px 20px;
     background: rgba(10, 10, 10, 0.9);
+    width: 100%;
+    max-width: 800px;
     transform: translateZ(5px); /* 3D effect */
 }
 
@@ -228,6 +232,8 @@ nav ul li a:hover {
 #contact {
     padding: 40px 20px;
     background: rgba(17, 17, 17, 0.9);
+    width: 100%;
+    max-width: 800px;
     text-align: center;
     transform: translateZ(5px); /* 3D effect */
 }
@@ -266,6 +272,8 @@ footer {
     text-align: center;
     padding: 15px;
     background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    max-width: 800px;
     border-top: 1px solid #00ff88;
     transform: translateZ(5px); /* 3D effect */
     font-size: 0.9rem;
@@ -287,7 +295,11 @@ footer {
         width: 90%;
     }
 
-    .floating-icons img, .global-floating-icons img {
+    .floating-icons img {
         width: 40px; /* Adjust icon size for mobile */
+    }
+
+    .hero, #faq, #contact, footer {
+        max-width: 90%;
     }
 }
