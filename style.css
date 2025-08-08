@@ -108,11 +108,11 @@ section {
 .cta-button {
     background: linear-gradient(45deg, #00ff88, #00cc66);
     color: #0f0f1a;
-    padding: 15px 30px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
     transform-style: preserve-3d;
@@ -196,7 +196,6 @@ section {
 .coins .token-box, .tokens .token-box {
     padding: 15px 30px;
     border-radius: 10px;
-    border: 2px solid #00ff88;
     font-size: 1.2rem;
     color: #00ff88;
     text-shadow: 0 0 5px #00ff88;
@@ -330,7 +329,7 @@ footer {
         margin: 5px;
     }
     .cta-button {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 10px 20px;
     }
     nav ul {
