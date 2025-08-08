@@ -1,157 +1,72 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 body {
-  margin: 0;
-  font-family: 'Orbitron', 'Arial', sans-serif;
-  background: #000 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-  color: #fff;
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    background: black url('https://i.ibb.co/0j3sVJh/quantum-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
+
 header {
-  background: rgba(15, 15, 26, 0.8);
-  padding: 15px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 0 10px #00ff88;
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.6);
+    font-size: 2em;
+    text-shadow: 0 0 15px cyan;
 }
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00ff88;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-nav ul li a:hover {
-  color: #00ff88;
-  text-shadow: 0 0 8px #00ff88;
-}
+
 section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.7);
 }
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
-  margin: 20px auto;
+
+h2 {
+    color: cyan;
 }
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 20px #00ff88, 0 0 10px #00cc66;
-  text-align: center;
-  text-transform: lowercase;
+
+.btn-3d {
+    background: linear-gradient(to bottom, #00ffff, #008080);
+    color: black;
+    padding: 10px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #006666;
+    cursor: pointer;
+    transition: 0.2s;
 }
-.hero p {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
+
+.btn-3d:active {
+    box-shadow: 0 2px #006666;
+    transform: translateY(3px);
 }
-.generator {
-  padding: 20px;
-  border: 2px solid #00ff88;
-  border-radius: 10px;
-  margin-top: 20px;
-  max-width: 600px;
-  position: relative;
+
+input[type=number] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
 }
-.generator input {
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  font-size: 1rem;
-  margin: 10px auto;
-  display: block;
+
+.crypto-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
-.three-d-button {
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  background: #00cc66;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 0.1s;
-  box-shadow: 0 5px 0 #00994d;
-  display: block;
-  margin: 10px auto;
+
+.crypto-icons .icon {
+    width: 50px;
+    position: absolute;
+    animation: float 10s infinite linear;
 }
-.three-d-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 0 #00994d;
-}
-.three-d-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 3px 0 #00994d;
-}
-.timer {
-  display: none;
-  margin-top: 10px;
-  font-size: 1.5rem;
-  color: #00ff88;
-}
-.payment-confirmation {
-  display: none;
-  margin-top: 15px;
-  font-size: 1rem;
-}
-.payment-confirmation a {
-  color: #00cc66;
-}
-footer {
-  background: rgba(15,15,26,0.9);
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #00ff88;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .hero p { font-size: 1.2rem; max-width: 90%; }
-  .generator { padding: 15px; max-width: 90%; margin: 20px auto; }
-  .three-d-button { font-size: 1.3rem; }
-  .generator input { max-width: 150px; }
-  .timer { font-size: 1.2rem; }
+
+@keyframes float {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-100px); }
 }
