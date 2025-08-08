@@ -81,13 +81,14 @@ section {
 }
 
 .hero {
-    height: 100vh;
+    height: auto; /* Adjusted from 100vh to ensure content fits */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to avoid clipping */
 }
 
 .hero h1 {
@@ -138,6 +139,9 @@ section {
     background-color: #ffffff;
     color: #000000;
     display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
 }
 
 .floating-icons, .global-floating-icons {
@@ -147,7 +151,7 @@ section {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1;
+    z-index: 1; /* Lowered to avoid overlap with generator */
 }
 
 .floating-icons i.quan, .global-floating-icons i.quan {
@@ -227,7 +231,8 @@ section {
     max-width: 600px;
     text-align: center;
     display: block;
-    z-index: 10;
+    z-index: 1000; /* Increased to ensure visibility over floating icons */
+    position: relative;
 }
 
 h2 {
@@ -379,6 +384,7 @@ footer {
     .generator {
         padding: 15px;
         max-width: 90%;
+        margin: 20px auto;
     }
     #generator-message, #generator #timer, #payment-confirmation {
         font-size: 1rem;
@@ -386,6 +392,12 @@ footer {
     #amount-input {
         width: 100%;
         max-width: 150px;
+        margin: 10px auto;
+    }
+    #generate-button {
+        width: 100%;
+        max-width: 150px;
+        margin: 10px auto;
     }
     #timer {
         font-size: 1.5rem;
