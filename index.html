@@ -141,6 +141,7 @@
                 payDiv.style.display = 'none';
                 return;
             }
+            generatorMessage.textContent = 'Generating... Please wait.';
             btn.disabled = true;
             let sec = 10;
             timerDiv.style.display = 'block';
@@ -153,6 +154,7 @@
                     clearInterval(countdown);
                     timerDiv.style.display = 'none';
                     payDiv.style.display = 'block';
+                    generatorMessage.textContent = 'Payment confirmation required:';
                     btn.disabled = false;
                 }
             }, 1000);
