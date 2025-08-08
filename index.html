@@ -3,166 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto FlashTech - Flash USDT Generator</title>
+    <title>Cryptoflashtech - Flash USDT Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="floating-icons">
+        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png">
+        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png">
+        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png">
+        <img src="https://cryptologos.cc/logos/tron-trx-logo.png">
+        <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png">
+        <img src="https://cryptologos.cc/logos/solana-sol-logo.png">
+    </div>
+
     <header>
         <nav>
-            <div class="logo">Crypto FlashTech</div>
+            <div class="logo">Cryptoflashtech</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#future">Future of Crypto</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#future">future</a></li>
+                <li><a href="#faq">faq</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Introducing Flash USDT by Crypto FlashTech</h1>
-        <p>Discover the power of Flash USDT — a groundbreaking cryptocurrency solution from Crypto FlashTech. Engineered for unmatched security, lightning-fast transactions, and reliability, Flash USDT redefines digital asset management. Issued under original blockchain contracts, it ensures authenticity and seamless transfers across networks. With a 180-day validity, Flash USDT empowers traders and investors with a cutting-edge tool for the future of finance.</p>
-        
-        <div class="availability-box">
-            <h2>Coins Available</h2>
-            <div class="token-boxes coins">
-                <div class="token-box">USDT TRC20</div>
-                <div class="token-box">USDT ERC20</div>
-                <div class="token-box">Solana USDT</div>
-                <div class="token-box">BNB USDT</div>
-            </div>
-            <h2>Tokens Available</h2>
-            <div class="token-boxes tokens">
-                <div class="token-box">Teller BEP20</div>
-                <div class="token-box">BTCBR BEP20</div>
-                <div class="token-box">USDT.Z</div>
-            </div>
-        </div>
+    <section class="hero">
+        <h1>introducing flash usdt</h1>
+        <p>Discover the power of Flash USDT, a groundbreaking cryptocurrency solution.</p>
+    </section>
 
-        <section id="generator" class="generator">
-            <h2>Flash USDT Generator</h2>
-            <p id="generator-message">Enter the minimum amount of Flash USDT you want to generate (10,000+ coins).</p>
-            
-            <input type="number" id="amount-input" value="10000" placeholder="Enter minimum amount (10,000 coins)" min="10000" class="cta-button drawer-input" style="padding: 8px; margin: 5px 0; font-size: 1rem; border-radius: 5px; border: 1px solid #00ff88; text-align: center; width: 200px; display: block;">
-            
-            <button id="generate-button" class="cta-button three-d-button" style="display: block; margin: 10px 0;">Generate</button>
-            
-            <div id="timer" style="display: none; margin: 10px 0; text-align: center; font-size: 1.8rem; color: #00ff88; text-shadow: 0 0 5px #00ff88;">10:00 (Minimum: 10,000 coins)</div>
-            
-            <div id="payment-confirmation" style="display: none; margin: 10px 0; text-align: center; color: #fff;">
-                <p>Please confirm payment of <strong>4,302 TRX</strong> to address: <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong></p>
-                <p>Send a screenshot to <a href="https://wa.me/+25498373493" target="_blank">WhatsApp</a> or <a href="mailto:crypto.flashtech@gmail.com">Email</a> for confirmation.</p>
-            </div>
-        </section>
-
-        <div class="floating-icons">
-            <i class="fab quan fa-bitcoin"></i>
-            <i class="fab quan fa-ethereum"></i>
-            <i class="fab quan fa-btc"></i>
-            <i class="fas quan fa-coins"></i>
-            <i class="fab quan fa-binance"></i>
-            <i class="fab quan fa-solana"></i>
-            <i class="fab quan fa-usd-circle"></i>
-            <i class="fab quan fa-ripple"></i>
-            <i class="fab quan fa-cardano"></i>
-            <i class="fab quan fa-polkadot"></i>
-            <i class="fab quan fa-avalanche"></i>
-            <i class="fab quan fa-cosmos"></i>
+    <section class="availability-box">
+        <h2>coins available</h2>
+        <div class="token-boxes">
+            <div class="token-box">usdt trc20</div>
+            <div class="token-box">usdt erc20</div>
         </div>
     </section>
 
-    <section id="future">
-        <h2>The Future of Cryptocurrency</h2>
-        <p>The cryptocurrency landscape is evolving rapidly, with 2025 poised to be a transformative year. Decentralized finance (DeFi) and stablecoins like USDT are driving mainstream adoption. Flash USDT, with its time-bound validity, is set to redefine transactional efficiency in trading and remittances. Blockchain interoperability and layer-2 solutions will enhance transaction speeds and reduce costs, making crypto more accessible. Advancements in quantum-resistant cryptography will bolster security. As regulations mature, expect increased institutional investment. Crypto FlashTech is at the forefront of these innovations.</p>
+    <section class="generator">
+        <h2>Flash USDT Generator</h2>
+        <input type="number" id="amount" placeholder="Enter amount (min 10,000)">
+        <button class="cta-button">Generate</button>
     </section>
 
     <section id="faq">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-            <h3>What is the minimum generation amount?</h3>
-            <p>The minimum generation amount for Flash USDT is 10,000 coins.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How much is the generation fee?</h3>
-            <p>The generation fee is 4,302 TRX.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What is the confirmation fee?</h3>
-            <p>After confirmation, a 15% fee applies.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How long are Flash tokens valid?</h3>
-            <p>Flash tokens are valid for 180 days.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Which tokens can be generated?</h3>
-            <p>We support ERC20 USDT, TRC20 USDT, Solana USDT, BNB USDT, USDT.Z, Teller BEP20, BTCBR BEP20.</p>
-        </div>
+        <h2>faq</h2>
+        <div class="faq-item">FAQ content here</div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For support or inquiries:</p>
+        <h2>contact</h2>
         <div class="contact-buttons">
-            <a href="https://wa.me/+25498373493" target="_blank" class="contact-button three-d-button whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="https://t.me/hitmangad" target="_blank" class="contact-button three-d-button telegram"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="mailto:crypto.flashtech@gmail.com" class="contact-button three-d-button email"><i class="fas fa-envelope"></i> Email</a>
+            <a href="#" class="contact-button whatsapp">WhatsApp</a>
+            <a href="#" class="contact-button telegram">Telegram</a>
+            <a href="#" class="contact-button email">Email</a>
         </div>
-        <p>After paying <strong>4,302 TRX</strong> to <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong>, send a screenshot to our email or WhatsApp for confirmation.</p>
     </section>
 
     <footer>
-        <p>© 2025 Crypto FlashTech. All rights reserved.</p>
+        <p>© 2025 Cryptoflashtech. All rights reserved.</p>
     </footer>
 
-    <div class="global-floating-icons">
-        <i class="fab quan fa-bitcoin"></i>
-        <i class="fab quan fa-ethereum"></i>
-        <i class="fab quan fa-btc"></i>
-        <i class="fas quan fa-coins"></i>
-        <i class="fab quan fa-binance"></i>
-        <i class="fab quan fa-solana"></i>
-        <i class="fab quan fa-usd-circle"></i>
-        <i class="fab quan fa-ripple"></i>
-        <i class="fab quan fa-cardano"></i>
-        <i class="fab quan fa-dogecoin"></i>
-        <i class="fab quan fa-polkadot"></i>
-        <i class="fab quan fa-avalanche"></i>
-        <i class="fab quan fa-cosmos"></i>
-    </div>
-
     <script>
-        const timerElement = document.getElementById('timer');
-        const generatorMessage = document.getElementById('generator-message');
-        const amountInput = document.getElementById('amount-input');
-        const generateButton = document.getElementById('generate-button');
-        const paymentConfirmation = document.getElementById('payment-confirmation');
-        let countdown;
-
-        generateButton.addEventListener('click', () => {
-            const amount = parseInt(amountInput.value);
-            if (amount >= 10000) {
-                clearInterval(countdown);
-                let time = 10 * 60; // 10 minutes in seconds
-                timerElement.style.display = 'block';
-                paymentConfirmation.style.display = 'block';
-                countdown = setInterval(() => {
-                    const minutes = Math.floor(time / 60);
-                    const seconds = time % 60;
-                    timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')} (Minimum: 10,000 coins)`;
-                    time--;
-                    if (time < 0) {
-                        clearInterval(countdown);
-                        timerElement.textContent = 'Time Expired (Minimum: 10,000 coins)';
-                    }
-                }, 1000);
-            } else {
-                generatorMessage.textContent = 'Minimum amount must be 10,000 coins or more.';
-                timerElement.style.display = 'none';
-                paymentConfirmation.style.display = 'none';
-            }
-        });
+        // Add your generate function here if needed
     </script>
 </body>
 </html>
