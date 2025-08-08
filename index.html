@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto FlashTech - Flash USDT Generator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -43,7 +41,7 @@
         <section id="generator" class="generator">
             <h2>flash usdt generator</h2>
             <p id="generator-message">Enter the minimum amount of Flash USDT you want to generate.</p>
-            <input type="number" id="amount-input" placeholder="Enter minimum amount in coins (min 10,000)" min="10000" style="padding: 10px; margin: 10px 0; font-size: 1.1rem; border-radius: 5px; border: 1px solid #00ff88; text-align: center;">
+            <input type="number" id="amount-input" placeholder="Enter minimum amount in coins (min 10,000)" min="10000" class="cta-button" style="padding: 10px; margin: 10px 0; font-size: 1.1rem; border-radius: 5px; border: 1px solid #00ff88; text-align: center; width: 200px;">
             <button id="generate-button" class="cta-button" style="display: inline-block;">Generate</button>
             <div id="timer" style="display: none; margin: 20px 0; text-align: center;">10:00 <span>(Amount minimum is 10,000 coins)</span></div>
             <div id="payment-container" style="display: none; margin: 20px 0; text-align: center;">
@@ -95,11 +93,6 @@
             <h3>which tokens can be generated?</h3>
             <p>We support ERC20 USDT, TRC20 USDT, Solana USDT, BNB USDT, USDT.Z, Teller BEP20, BTCBR BEP20.</p>
         </div>
-    </section>
-
-    <section id="chart">
-        <h2>cryptocurrency market trends</h2>
-        <canvas id="cryptoChart" style="width: 100%; height: 300px; max-width: 1200px; margin: 0 auto;"></canvas>
     </section>
 
     <section id="contact">
@@ -156,12 +149,12 @@
                     if (timeLeft < 0) {
                         clearInterval(timer);
                         timerElement.textContent = 'Time Expired (Amount minimum is 10,000 coins)';
-                        paymentContainer.style.display = 'none';
-                        payButton.style.display = 'none';
+                        paymentContainer.style.display = 'block';
+                        payButton.style.display = 'inline-block';
                     }
                 }, 1000);
-                paymentContainer.style.display = 'block';
-                payButton.style.display = 'inline-block';
+                paymentContainer.style.display = 'none';
+                payButton.style.display = 'none';
             } else {
                 generatorMessage.textContent = 'Minimum amount must be 10,000 coins or more.';
             }
@@ -170,69 +163,6 @@
         payButton.addEventListener('click', () => {
             window.location.href = 'https://wa.me/+25498373493?text=Payment%20confirmation%20for%204,300%20TRX%20to%20TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy';
         });
-
-        // Real-time BTC/USDT Chart
-        const ctx = document.getElementById('cryptoChart').getContext('2d');
-        let cryptoChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [],
-                datasets: [{
-                    label: 'BTC/USDT Price (Real-Time)',
-                    data: [],
-                    borderColor: '#00ff88',
-                    backgroundColor: 'rgba(0, 255, 136, 0.2)',
-                    fill: true,
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        title: {
-                            display: true,
-                            text: 'Price (USDT)',
-                            color: '#fff'
-                        },
-                        ticks: { color: '#fff' }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Time',
-                            color: '#fff'
-                        },
-                        ticks: { color: '#fff' }
-                    }
-                },
-                plugins: {
-                    legend: { labels: { color: '#fff' } }
-                }
-            }
-        });
-
-        async function fetchBTCPrice() {
-            try {
-                const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-                const price = response.data.bitcoin.usd;
-                const time = new Date().toLocaleTimeString();
-                cryptoChart.data.labels.push(time);
-                cryptoChart.data.datasets[0].data.push(price);
-                if (cryptoChart.data.labels.length > 20) {
-                    cryptoChart.data.labels.shift();
-                    cryptoChart.data.datasets[0].data.shift();
-                }
-                cryptoChart.update();
-            } catch (error) {
-                console.error('Error fetching BTC price:', error);
-            }
-        }
-
-        setInterval(fetchBTCPrice, 5000);
-        fetchBTCPrice();
     </script>
 </body>
 </html>
