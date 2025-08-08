@@ -168,6 +168,24 @@ nav ul li a:hover {
     color: #00ff88;
 }
 
+.progress-bar {
+    width: 100%;
+    max-width: 300px;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: none;
+}
+
+#progress {
+    height: 100%;
+    background: #00ff88;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s linear;
+}
+
 .cta-button {
     background-color: #00ff88;
     color: #000;
@@ -275,6 +293,28 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
 .contact-buttons {
     display: flex;
     justify-content: center;
@@ -291,7 +331,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 0 10px #00ff88;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contact-button:hover {
@@ -302,6 +342,56 @@ nav ul li a:hover {
 .contact-button.whatsapp { background: #25D366; color: #fff; }
 .contact-button.telegram { background: #0088cc; color: #fff; }
 .contact-button.email { background: #ffdd57; color: #000; }
+
+/* Blog Section */
+#blog {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+#blog h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(17, 17, 17, 0.9);
+    border-left: 4px solid #00ff88;
+    border-radius: 5px;
+}
+
+.blog-post h3 {
+    color: #00ff88;
+    margin-bottom: 5px;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Privacy Section */
+#privacy {
+    padding: 40px 20px;
+    background: rgba(10, 10, 10, 0.9);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+#privacy h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+#privacy p {
+    font-size: 1rem;
+    color: #ccc;
+}
 
 /* Footer */
 footer {
@@ -334,7 +424,7 @@ footer {
         width: 40px; /* Adjust icon size for mobile */
     }
 
-    .hero, #future, #faq, #contact, footer {
+    .hero, #future, #faq, #contact, #blog, #privacy, footer {
         max-width: 90%;
     }
 
@@ -344,5 +434,9 @@ footer {
 
     .cta-button {
         max-width: 150px;
+    }
+
+    .contact-form {
+        max-width: 100%;
     }
 }
