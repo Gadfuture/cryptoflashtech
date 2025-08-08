@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Orbitron', 'Arial', sans-serif;
-    background: #000000 url('https://images.unsplash.com/photo-1634138119436-3b07bbf5e3c1') no-repeat center/cover;
+    background: #000000 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
     color: #fff;
     line-height: 1.6;
     position: relative;
@@ -176,14 +176,12 @@ section {
 .global-floating-icons i:nth-child(13) { animation-delay: 12s; left: 60%; top: 45%; }
 
 .availability-box {
-    background: rgba(15, 15, 26, 0.9);
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #00ff88;
     margin: 20px 0;
     width: 100%;
     max-width: 800px;
-    box-shadow: 0 0 15px #00ff88;
     text-align: center;
 }
 
@@ -196,7 +194,6 @@ section {
 }
 
 .coins .token-box, .tokens .token-box {
-    background: rgba(15, 15, 26, 0.9);
     padding: 15px 30px;
     border-radius: 10px;
     border: 2px solid #00ff88;
@@ -209,9 +206,7 @@ section {
 }
 
 .generator {
-    width: 100%;
     padding: 20px;
-    background: rgba(15, 15, 26, 0.9);
     border-radius: 10px;
     margin-top: 20px;
     border: 2px solid #00ff88;
@@ -237,7 +232,6 @@ p {
 }
 
 .faq-item {
-    background: rgba(15, 15, 26, 0.9);
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -303,25 +297,6 @@ p {
 .email { background: #666; color: #fff; }
 .email:hover { background: #555; }
 
-#chart {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    background: rgba(15, 15, 26, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #00ff88;
-    max-width: 1000px;
-    text-align: center;
-}
-
-#chart canvas {
-    width: 100% !important;
-    height: 300px !important;
-    max-width: 1000px !important;
-    margin: 0 auto !important;
-}
-
 footer {
     background: rgba(15, 15, 26, 0.9);
     padding: 20px;
@@ -384,9 +359,6 @@ footer {
     .contact-button {
         font-size: 1rem;
         padding: 10px 20px;
-    }
-    #chart canvas {
-        height: 200px !important;
     }
     .availability-box {
         max-width: 90%;
