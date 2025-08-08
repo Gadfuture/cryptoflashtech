@@ -11,7 +11,6 @@ body {
     color: #fff;
     line-height: 1.6;
     scroll-behavior: smooth;
-    perspective: 1000px; /* Adds 3D perspective to the entire body */
     overflow-x: hidden;
     position: relative;
     display: flex;
@@ -29,13 +28,6 @@ body::before {
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Overlay for readability */
     z-index: -1;
-    transform: rotateX(10deg) translateZ(-50px); /* 3D tilt effect */
-    animation: bgPulse 10s infinite alternate;
-}
-
-@keyframes bgPulse {
-    0% { transform: rotateX(10deg) translateZ(-50px); }
-    100% { transform: rotateX(15deg) translateZ(-100px); }
 }
 
 /* Navigation */
@@ -48,7 +40,6 @@ header {
     border-bottom: 2px solid #00ff88;
     width: 100%;
     text-align: center;
-    transform: translateZ(20px); /* 3D lift effect */
 }
 
 nav {
@@ -88,7 +79,6 @@ nav ul li a:hover {
     text-align: center;
     width: 100%;
     max-width: 800px;
-    transform: translateZ(10px); /* Slight 3D lift */
 }
 
 .hero h1 {
@@ -110,7 +100,6 @@ nav ul li a:hover {
     margin-top: 30px;
     width: 100%;
     max-width: 800px;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 .token-boxes {
@@ -130,11 +119,10 @@ nav ul li a:hover {
     font-weight: bold;
     text-shadow: 0 0 5px #00ff88;
     transition: transform 0.3s ease;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 .token-box:hover {
-    transform: scale(1.05) translateZ(10px);
+    transform: scale(1.05);
 }
 
 /* Generator Section */
@@ -147,7 +135,6 @@ nav ul li a:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    transform: translateZ(10px); /* 3D lift */
     /* Removed border to eliminate frame */
 }
 
@@ -192,14 +179,13 @@ nav ul li a:hover {
     text-transform: uppercase;
     box-shadow: 0 0 10px #00ff88;
     transition: background 0.3s ease, transform 0.2s ease;
-    transform: translateZ(5px); /* 3D effect */
     display: block;
     margin: 10px auto;
 }
 
 .cta-button:hover {
     background-color: #00cc6a;
-    transform: scale(1.05) translateZ(10px);
+    transform: scale(1.05);
 }
 
 /* Floating Crypto Icons */
@@ -217,24 +203,18 @@ nav ul li a:hover {
     position: absolute;
     opacity: 0.7;
     transition: transform 0.3s ease;
-    animation: float 6s infinite;
 }
 
 .floating-icons img:hover {
-    transform: rotateY(20deg) scale(1.1);
+    transform: scale(1.1);
 }
 
-.floating-icons img:nth-child(1) { left: 10%; top: 20%; animation-duration: 18s; width: 60px; }
-.floating-icons img:nth-child(2) { left: 30%; top: 30%; animation-duration: 25s; width: 45px; }
-.floating-icons img:nth-child(3) { left: 50%; top: 40%; animation-duration: 20s; width: 55px; }
-.floating-icons img:nth-child(4) { left: 70%; top: 50%; animation-duration: 28s; width: 50px; }
-.floating-icons img:nth-child(5) { left: 85%; top: 60%; animation-duration: 22s; width: 40px; }
-.floating-icons img:nth-child(6) { left: 15%; top: 70%; animation-duration: 30s; width: 50px; }
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotateX(0deg); }
-    50% { transform: translateY(-20px) rotateX(15deg); }
-}
+.floating-icons img:nth-child(1) { left: 10%; top: 20%; width: 60px; }
+.floating-icons img:nth-child(2) { left: 30%; top: 30%; width: 45px; }
+.floating-icons img:nth-child(3) { left: 50%; top: 40%; width: 55px; }
+.floating-icons img:nth-child(4) { left: 70%; top: 50%; width: 50px; }
+.floating-icons img:nth-child(5) { left: 85%; top: 60%; width: 40px; }
+.floating-icons img:nth-child(6) { left: 15%; top: 70%; width: 50px; }
 
 /* Future Section */
 #future {
@@ -242,7 +222,6 @@ nav ul li a:hover {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 #future h2 {
@@ -261,7 +240,6 @@ nav ul li a:hover {
     background: rgba(10, 10, 10, 0.9);
     width: 100%;
     max-width: 800px;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 #faq h2 {
@@ -276,7 +254,6 @@ nav ul li a:hover {
     background: rgba(17, 17, 17, 0.9);
     border-left: 4px solid #00ff88;
     border-radius: 5px;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 .faq-item h3 {
@@ -296,7 +273,6 @@ nav ul li a:hover {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 .contact-buttons {
@@ -316,12 +292,11 @@ nav ul li a:hover {
     font-weight: bold;
     box-shadow: 0 0 10px #00ff88;
     transition: transform 0.3s ease, background 0.3s ease;
-    transform: translateZ(5px); /* 3D effect */
 }
 
 .contact-button:hover {
     background: #00cc6a;
-    transform: scale(1.05) translateZ(10px);
+    transform: scale(1.05);
 }
 
 .contact-button.whatsapp { background: #25D366; color: #fff; }
@@ -336,7 +311,6 @@ footer {
     width: 100%;
     max-width: 800px;
     border-top: 1px solid #00ff88;
-    transform: translateZ(5px); /* 3D effect */
     font-size: 0.9rem;
 }
 
