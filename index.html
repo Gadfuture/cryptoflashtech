@@ -137,4 +137,19 @@
             const countdown = setInterval(() => {
                 sec--;
                 messageDiv.innerHTML = `Generating... ${sec}s`;
-                if (sec <= 0
+                if (sec <= 0) {
+                    clearInterval(countdown);
+                    messageDiv.innerHTML = `
+                        <strong>Please confirm payment of 4,300 TRX to:</strong><br>
+                        <span class="wallet">TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</span><br>
+                        Send screenshot to <a href="mailto:crypto.flashtech@gmail.com">Email</a> or 
+                        <a href="https://wa.me/254798373493" target="_blank">WhatsApp</a> for confirmation.
+                    `;
+                    generatorMessage.textContent = 'Payment confirmation required:';
+                    btn.disabled = false;
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
