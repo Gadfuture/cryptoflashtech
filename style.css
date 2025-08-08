@@ -124,6 +124,11 @@ section {
     box-shadow: 0 0 15px #00ff88;
 }
 
+.drawer-input {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .floating-icons, .global-floating-icons {
     position: absolute;
     top: 0;
@@ -343,7 +348,7 @@ footer {
         padding: 15px;
         max-width: 90%;
     }
-    #generator-message, #generator #timer, #payment-container p {
+    #generator-message, #generator #timer {
         font-size: 1rem;
     }
     #amount-input {
