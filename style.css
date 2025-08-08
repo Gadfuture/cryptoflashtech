@@ -151,6 +151,36 @@ nav ul li a:hover {
     /* Removed border to eliminate frame */
 }
 
+#generator-message {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.input-style {
+    background-color: #fff;
+    color: #000;
+    padding: 8px;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #00ff88;
+    text-align: center;
+    display: none;
+}
+
+.wallet {
+    font-weight: bold;
+    color: #00ff88;
+}
+
 .cta-button {
     background-color: #00ff88;
     color: #000;
@@ -163,6 +193,8 @@ nav ul li a:hover {
     box-shadow: 0 0 10px #00ff88;
     transition: background 0.3s ease, transform 0.2s ease;
     transform: translateZ(5px); /* 3D effect */
+    display: block;
+    margin: 10px auto;
 }
 
 .cta-button:hover {
@@ -204,6 +236,25 @@ nav ul li a:hover {
     50% { transform: translateY(-20px) rotateX(15deg); }
 }
 
+/* Future Section */
+#future {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    transform: translateZ(5px); /* 3D effect */
+}
+
+#future h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+#future p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
 /* FAQ Section */
 #faq {
     padding: 40px 20px;
@@ -226,6 +277,16 @@ nav ul li a:hover {
     border-left: 4px solid #00ff88;
     border-radius: 5px;
     transform: translateZ(5px); /* 3D effect */
+}
+
+.faq-item h3 {
+    color: #00ff88;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #ccc;
 }
 
 /* Contact Section */
@@ -299,7 +360,15 @@ footer {
         width: 40px; /* Adjust icon size for mobile */
     }
 
-    .hero, #faq, #contact, footer {
+    .hero, #future, #faq, #contact, footer {
         max-width: 90%;
+    }
+
+    .input-style {
+        max-width: 150px;
+    }
+
+    .cta-button {
+        max-width: 150px;
     }
 }
