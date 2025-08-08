@@ -127,7 +127,6 @@ section {
 .drawer-input {
     background-color: #ffffff;
     color: #000000;
-    display: block; /* Ensure visibility */
 }
 
 .floating-icons, .global-floating-icons {
@@ -201,4 +200,173 @@ section {
 .coins .token-box, .tokens .token-box {
     padding: 15px 30px;
     border-radius: 10px;
-    font-size:
+    font-size: 1.2rem;
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+    transform-style: preserve-3d;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.generator {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid #00ff88;
+    max-width: 600px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+    font-weight: bold;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.faq-item {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #00ff88;
+}
+
+.faq-item h3 {
+    margin: 0 0 10px;
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+#generator #timer {
+    font-size: 1.8rem;
+    color: #00ff88;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00ff88;
+    text-align: center;
+}
+
+#generator-message {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.contact-button:hover {
+    transform: translateZ(10px) scale(1.05);
+    box-shadow: 0 0 15px #00ff88;
+}
+
+.whatsapp { background: #25D366; color: #fff; }
+.whatsapp:hover { background: #1DA851; }
+.telegram { background: #0088cc; color: #fff; }
+.telegram:hover { background: #006699; }
+.email { background: #666; color: #fff; }
+.email:hover { background: #555; }
+
+footer {
+    background: rgba(15, 15, 26, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #00ff88;
+    width: 100%;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotateX(0deg); }
+    50% { transform: translateY(-20px) rotateX(15deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+    .token-boxes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .token-box {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .generator {
+        padding: 15px;
+        max-width: 90%;
+    }
+    #generator-message, #generator #timer {
+        font-size: 1rem;
+    }
+    #amount-input {
+        width: 100%;
+        max-width: 150px;
+    }
+    #timer {
+        font-size: 1.5rem;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .availability-box {
+        max-width: 90%;
+    }
+}
