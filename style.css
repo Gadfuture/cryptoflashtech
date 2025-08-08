@@ -117,16 +117,27 @@ section {
     display: inline-block;
     transform-style: preserve-3d;
     text-align: center;
+    position: relative;
 }
 
-.cta-button:hover {
-    transform: translateZ(10px) scale(1.05);
-    box-shadow: 0 0 15px #00ff88;
+.three-d-button {
+    transform: perspective(500px) translateZ(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.three-d-button:hover {
+    transform: perspective(500px) translateZ(20px) rotateX(10deg);
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.5);
+}
+
+.three-d-button:active {
+    transform: perspective(500px) translateZ(0) rotateX(0deg);
 }
 
 .drawer-input {
     background-color: #ffffff;
     color: #000000;
+    display: block;
 }
 
 .floating-icons, .global-floating-icons {
@@ -215,6 +226,8 @@ section {
     border: 2px solid #00ff88;
     max-width: 600px;
     text-align: center;
+    display: block;
+    z-index: 10;
 }
 
 h2 {
@@ -259,6 +272,7 @@ p {
     margin: 10px 0;
     text-shadow: 0 0 5px #00ff88;
     text-align: center;
+    display: block;
 }
 
 #generator-message {
@@ -266,6 +280,15 @@ p {
     color: #fff;
     margin-bottom: 10px;
     text-align: center;
+    display: block;
+}
+
+#payment-confirmation {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+    display: block;
 }
 
 .contact-buttons {
@@ -286,11 +309,20 @@ p {
     display: inline-block;
     transform-style: preserve-3d;
     text-align: center;
+    position: relative;
 }
 
-.contact-button:hover {
-    transform: translateZ(10px) scale(1.05);
-    box-shadow: 0 0 15px #00ff88;
+.contact-button.three-d-button {
+    transform: perspective(500px) translateZ(0);
+}
+
+.contact-button.three-d-button:hover {
+    transform: perspective(500px) translateZ(20px) rotateX(10deg);
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.5);
+}
+
+.contact-button.three-d-button:active {
+    transform: perspective(500px) translateZ(0) rotateX(0deg);
 }
 
 .whatsapp { background: #25D366; color: #fff; }
@@ -348,7 +380,7 @@ footer {
         padding: 15px;
         max-width: 90%;
     }
-    #generator-message, #generator #timer {
+    #generator-message, #generator #timer, #payment-confirmation {
         font-size: 1rem;
     }
     #amount-input {
