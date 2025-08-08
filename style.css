@@ -1,11 +1,14 @@
 body {
     margin: 0;
     font-family: 'Orbitron', 'Arial', sans-serif;
-    background: #000000 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
+    background: #000000 url('https://images.unsplash.com/photo-1634138119436-3b07bbf5e3c1') no-repeat center/cover;
     color: #fff;
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body::before {
@@ -15,7 +18,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
     pointer-events: none;
 }
@@ -23,19 +26,18 @@ body::before {
 header {
     background: rgba(15, 15, 26, 0.8);
     padding: 1rem 0;
-    position: fixed;
     width: 100%;
-    top: 0;
+    text-align: center;
     z-index: 1000;
     box-shadow: 0 0 10px #00ff88;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 20px;
 }
 
@@ -51,6 +53,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -58,6 +62,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s, text-shadow 0.3s;
+    text-align: center;
 }
 
 nav ul li a:hover {
@@ -68,13 +73,14 @@ nav ul li a:hover {
 section {
     padding: 80px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero {
-    padding-top: 120px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,16 +91,18 @@ section {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 15px #00ff88;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px #00ff88, 0 0 10px #00cc66;
     text-transform: lowercase;
+    text-align: center;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 700px;
+    text-align: center;
 }
 
 .cta-button {
@@ -108,6 +116,7 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
     transform-style: preserve-3d;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -140,26 +149,31 @@ section {
 }
 
 .floating-icons i:nth-child(1) { animation-delay: 0s; left: 10%; top: 20%; }
-.floating-icons i:nth-child(2) { animation-delay: 1.5s; left: 30%; top: 30%; }
-.floating-icons i:nth-child(3) { animation-delay: 3s; left: 50%; top: 40%; }
-.floating-icons i:nth-child(4) { animation-delay: 4.5s; left: 70%; top: 50%; }
-.floating-icons i:nth-child(5) { animation-delay: 6s; left: 15%; top: 60%; }
-.floating-icons i:nth-child(6) { animation-delay: 7.5s; left: 35%; top: 70%; }
-.floating-icons i:nth-child(7) { animation-delay: 9s; left: 55%; top: 25%; }
-.floating-icons i:nth-child(8) { animation-delay: 10.5s; left: 75%; top: 35%; }
-.floating-icons i:nth-child(9) { animation-delay: 12s; left: 20%; top: 45%; }
+.floating-icons i:nth-child(2) { animation-delay: 1s; left: 25%; top: 30%; }
+.floating-icons i:nth-child(3) { animation-delay: 2s; left: 40%; top: 40%; }
+.floating-icons i:nth-child(4) { animation-delay: 3s; left: 60%; top: 50%; }
+.floating-icons i:nth-child(5) { animation-delay: 4s; left: 15%; top: 60%; }
+.floating-icons i:nth-child(6) { animation-delay: 5s; left: 35%; top: 70%; }
+.floating-icons i:nth-child(7) { animation-delay: 6s; left: 50%; top: 25%; }
+.floating-icons i:nth-child(8) { animation-delay: 7s; left: 70%; top: 35%; }
+.floating-icons i:nth-child(9) { animation-delay: 8s; left: 20%; top: 45%; }
+.floating-icons i:nth-child(10) { animation-delay: 9s; left: 45%; top: 55%; }
+.floating-icons i:nth-child(11) { animation-delay: 10s; left: 65%; top: 65%; }
+.floating-icons i:nth-child(12) { animation-delay: 11s; left: 30%; top: 75%; }
 
 .global-floating-icons i:nth-child(1) { animation-delay: 0s; left: 15%; top: 25%; }
-.global-floating-icons i:nth-child(2) { animation-delay: 2s; left: 35%; top: 35%; }
-.global-floating-icons i:nth-child(3) { animation-delay: 4s; left: 55%; top: 45%; }
-.global-floating-icons i:nth-child(4) { animation-delay: 6s; left: 75%; top: 55%; }
-.global-floating-icons i:nth-child(5) { animation-delay: 1s; left: 20%; top: 60%; }
-.global-floating-icons i:nth-child(6) { animation-delay: 3s; left: 40%; top: 70%; }
-.global-floating-icons i:nth-child(7) { animation-delay: 5s; left: 60%; top: 30%; }
-.global-floating-icons i:nth-child(8) { animation-delay: 7s; left: 80%; top: 40%; }
-.global-floating-icons i:nth-child(9) { animation-delay: 9s; left: 25%; top: 50%; }
-.global-floating-icons i:nth-child(10) { animation-delay: 11s; left: 45%; top: 65%; }
-.global-floating-icons i:nth-child(11) { animation-delay: 13s; left: 65%; top: 55%; }
+.global-floating-icons i:nth-child(2) { animation-delay: 1s; left: 30%; top: 35%; }
+.global-floating-icons i:nth-child(3) { animation-delay: 2s; left: 45%; top: 45%; }
+.global-floating-icons i:nth-child(4) { animation-delay: 3s; left: 60%; top: 55%; }
+.global-floating-icons i:nth-child(5) { animation-delay: 4s; left: 20%; top: 60%; }
+.global-floating-icons i:nth-child(6) { animation-delay: 5s; left: 40%; top: 70%; }
+.global-floating-icons i:nth-child(7) { animation-delay: 6s; left: 55%; top: 30%; }
+.global-floating-icons i:nth-child(8) { animation-delay: 7s; left: 75%; top: 40%; }
+.global-floating-icons i:nth-child(9) { animation-delay: 8s; left: 25%; top: 50%; }
+.global-floating-icons i:nth-child(10) { animation-delay: 9s; left: 50%; top: 65%; }
+.global-floating-icons i:nth-child(11) { animation-delay: 10s; left: 70%; top: 55%; }
+.global-floating-icons i:nth-child(12) { animation-delay: 11s; left: 35%; top: 75%; }
+.global-floating-icons i:nth-child(13) { animation-delay: 12s; left: 60%; top: 45%; }
 
 .availability-box {
     background: rgba(15, 15, 26, 0.9);
@@ -168,8 +182,9 @@ section {
     border: 2px solid #00ff88;
     margin: 20px 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     box-shadow: 0 0 15px #00ff88;
+    text-align: center;
 }
 
 .token-boxes {
@@ -177,8 +192,7 @@ section {
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .coins .token-box, .tokens .token-box {
@@ -191,6 +205,7 @@ section {
     text-shadow: 0 0 5px #00ff88;
     transform-style: preserve-3d;
     white-space: nowrap;
+    text-align: center;
 }
 
 .generator {
@@ -200,6 +215,8 @@ section {
     border-radius: 10px;
     margin-top: 20px;
     border: 2px solid #00ff88;
+    max-width: 600px;
+    text-align: center;
 }
 
 h2 {
@@ -209,12 +226,14 @@ h2 {
     text-shadow: 0 0 10px #00ff88;
     font-weight: bold;
     text-transform: lowercase;
+    text-align: center;
 }
 
 p {
     max-width: 800px;
     margin: 0 auto 1.5rem;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .faq-item {
@@ -222,7 +241,7 @@ p {
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -234,6 +253,7 @@ p {
     color: #00ff88;
     text-shadow: 0 0 5px #00ff88;
     text-transform: lowercase;
+    text-align: center;
 }
 
 #generator #timer {
@@ -241,12 +261,14 @@ p {
     color: #00ff88;
     margin: 20px 0;
     text-shadow: 0 0 10px #00ff88;
+    text-align: center;
 }
 
 #generator-message {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .contact-buttons {
@@ -254,6 +276,7 @@ p {
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .contact-button {
@@ -265,6 +288,7 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
     display: inline-block;
     transform-style: preserve-3d;
+    text-align: center;
 }
 
 .contact-button:hover {
@@ -280,7 +304,6 @@ p {
 .email:hover { background: #555; }
 
 #chart {
-    position: relative;
     width: 100%;
     height: auto;
     margin: 20px 0;
@@ -288,12 +311,14 @@ p {
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #00ff88;
+    max-width: 1000px;
+    text-align: center;
 }
 
 #chart canvas {
     width: 100% !important;
     height: 300px !important;
-    max-width: 1200px !important;
+    max-width: 1000px !important;
     margin: 0 auto !important;
 }
 
@@ -302,8 +327,7 @@ footer {
     padding: 20px;
     text-align: center;
     border-top: 2px solid #00ff88;
-    position: relative;
-    z-index: 1;
+    width: 100%;
 }
 
 /* Animation for floating effect */
@@ -315,10 +339,11 @@ footer {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        max-width: 90%;
     }
     .token-boxes {
         flex-wrap: wrap;
@@ -334,16 +359,19 @@ footer {
         padding: 10px 20px;
     }
     nav ul {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     .logo {
         font-size: 1.5rem;
     }
     .generator {
-        padding: 10px;
+        padding: 15px;
+        max-width: 90%;
     }
     #generator-message, #generator #timer, #payment-container p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     #amount-input {
         width: 100%;
@@ -359,5 +387,8 @@ footer {
     }
     #chart canvas {
         height: 200px !important;
+    }
+    .availability-box {
+        max-width: 90%;
     }
 }
