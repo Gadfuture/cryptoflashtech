@@ -1,393 +1,191 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto FlashTech - Flash USDT Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Crypto FlashTech</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#future">Future of Crypto</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-    margin: 0;
-    font-family: 'Orbitron', 'Arial', sans-serif;
-    background: #000000 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-    color: #fff;
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
+    <section id="home" class="hero">
+        <h1>Introducing Flash USDT by Crypto FlashTech</h1>
+        <p>
+            Discover the power of Flash USDT, a groundbreaking cryptocurrency solution from Crypto FlashTech.
+            Engineered for unmatched security, lightning-fast transactions, and unwavering reliability, Flash USDT
+            redefines digital asset management. Issued under original blockchain contracts, it ensures authenticity
+            and seamless transfers across networks. With a 180-day validity, Flash USDT empowers traders and investors
+            with a cutting-edge tool for the future of finance.
+        </p>
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-    pointer-events: none;
-}
+        <div class="availability-box">
+            <h2>Coins Available</h2>
+            <div class="token-boxes coins">
+                <div class="token-box">USDT TRC20</div>
+                <div class="token-box">USDT ERC20</div>
+                <div class="token-box">Solana USDT</div>
+                <div class="token-box">BNB USDT</div>
+            </div>
 
-header {
-    background: rgba(15, 15, 26, 0.8);
-    padding: 1rem 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 0 10px #00ff88;
-}
+            <h2>Tokens Available</h2>
+            <div class="token-boxes tokens">
+                <div class="token-box">Teller BEP20</div>
+                <div class="token-box">BTCBR BEP20</div>
+                <div class="token-box">USDT.Z</div>
+            </div>
+        </div>
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    background: #000;
-    padding: 15px;
-}
+        <section id="generator" class="generator">
+            <h2>Flash USDT Generator</h2>
+            <p id="generator-message">Enter the minimum amount of Flash USDT you want to generate.</p>
+            
+            <input type="number" id="amount-input" value="10000" placeholder="Enter minimum amount (min 10,000)" min="10000" class="cta-button drawer-input" style="padding: 8px; margin: 5px 0; font-size: 1rem; border-radius: 5px; border: 1px solid #00ff88; text-align: center; width: 180px; display: block;">
+            
+            <button id="generate-button" class="cta-button three-d-button" style="display: block; margin: 10px 0;">Generate</button>
+            
+            <div id="timer" style="display: none; margin: 10px 0; text-align: center; font-size: 1.8rem; color: #00ff88; text-shadow: 0 0 5px #00ff88;">
+                10:00 <span>(Amount minimum is 10,000 coins)</span>
+            </div>
+            
+            <div id="payment-confirmation" style="display: none; margin: 10px 0; text-align: center; color: #fff;">
+                <p>Please confirm payment of <strong>4,302 TRX</strong> to Address: <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong></p>
+                <p>Send a screenshot to <a href="https://wa.me/+25498373493" target="_blank">WhatsApp</a> or <a href="mailto:crypto.flashtech@gmail.com">Email</a> for confirmation.</p>
+            </div>
+        </section>
 
-nav .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #00ff88;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        <div class="floating-icons">
+            <i class="fab quan fa-bitcoin"></i>
+            <i class="fab quan fa-ethereum"></i>
+            <i class="fab quan fa-btc"></i>
+            <i class="fas quan fa-coins"></i>
+            <i class="fab quan fa-binance"></i>
+            <i class="fab quan fa-solana"></i>
+            <i class="fab quan fa-usd-circle"></i>
+            <i class="fab quan fa-ripple"></i>
+            <i class="fab quan fa-cardano"></i>
+            <i class="fab quan fa-polkadot"></i>
+            <i class="fab quan fa-avalanche"></i>
+            <i class="fab quan fa-cosmos"></i>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-}
+    <section id="future">
+        <h2>Future of Cryptocurrency</h2>
+        <p>
+            The cryptocurrency landscape is evolving rapidly, with 2025 poised to be a transformative year.
+            Decentralized finance (DeFi) and stablecoins like USDT are driving mainstream adoption, offering
+            stability and scalability. Flash USDT, with its time-bound validity, is set to redefine transactional
+            efficiency in trading and remittances. Blockchain interoperability and layer-2 solutions will enhance
+            transaction speeds and reduce costs. Additionally, advancements in quantum-resistant cryptography will
+            bolster security, ensuring trust in digital assets. As regulatory frameworks mature, expect increased
+            institutional investment. Crypto FlashTech is at the forefront, leveraging these trends to deliver
+            innovative solutions for the future.
+        </p>
+    </section>
 
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3>What is the minimum generation amount?</h3>
+            <p>The minimum generation amount for Flash USDT is 10,000 coins.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How much is the generation fee?</h3>
+            <p>Clients are required to pay <strong>4,302 TRX</strong> to generate Flash USDT.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is the confirmation fee?</h3>
+            <p>After generation, clients pay a 15% fee for confirmation.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long are Flash tokens valid?</h3>
+            <p>Flash tokens are valid for 180 days.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Which tokens can be generated?</h3>
+            <p>We support ERC20 USDT, TRC20 USDT, Solana USDT, BNB USDT, USDT.Z, Teller BEP20, BTCBR BEP20.</p>
+        </div>
+    </section>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, text-shadow 0.3s;
-    text-align: center;
-}
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for support or inquiries:</p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/+25498373493" target="_blank" class="contact-button three-d-button whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://t.me/hitmangad" target="_blank" class="contact-button three-d-button telegram"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="mailto:crypto.flashtech@gmail.com" class="contact-button three-d-button email"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+        <p>
+            After payment via TRX to <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong>,
+            send a screenshot for confirmation to our email or WhatsApp.
+        </p>
+    </section>
 
-nav ul li a:hover {
-    color: #00ff88;
-    text-shadow: 0 0 8px #00ff88;
-}
+    <footer>
+        <p>© 2025 Crypto FlashTech. All rights reserved.</p>
+    </footer>
 
-section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    <div class="global-floating-icons">
+        <i class="fab quan fa-bitcoin"></i>
+        <i class="fab quan fa-ethereum"></i>
+        <i class="fab quan fa-btc"></i>
+        <i class="fas quan fa-coins"></i>
+        <i class="fab quan fa-binance"></i>
+        <i class="fab quan fa-solana"></i>
+        <i class="fab quan fa-usd-circle"></i>
+        <i class="fab quan fa-ripple"></i>
+        <i class="fab quan fa-cardano"></i>
+        <i class="fab quan fa-dogecoin"></i>
+        <i class="fab quan fa-polkadot"></i>
+        <i class="fab quan fa-avalanche"></i>
+        <i class="fab quan fa-cosmos"></i>
+    </div>
 
-.hero {
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: visible;
-    max-width: 600px;
-    margin: 20px auto;
-}
+    <script>
+        let timeLeft = 600; // 10 minutes in seconds
+        const timerElement = document.getElementById('timer');
+        const generatorMessage = document.getElementById('generator-message');
+        const amountInput = document.getElementById('amount-input');
+        const generateButton = document.getElementById('generate-button');
+        const paymentConfirmation = document.getElementById('payment-confirmation');
+        let timer;
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 20px #00ff88, 0 0 10px #00cc66;
-    text-transform: lowercase;
-    text-align: center;
-}
-
-.hero p {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-    max-width: 700px;
-    text-align: center;
-}
-
-.three-d-button {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    background: #00cc66;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: transform 0.1s;
-    box-shadow: 0 5px 0 #00994d;
-}
-
-.three-d-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 0 #00994d;
-}
-
-.three-d-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 3px 0 #00994d;
-}
-
-.drawer-input {
-    background-color: #ffffff;
-    color: #000000;
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #00cc66;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    margin: 10px auto;
-}
-
-.generator {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    max-width: 600px;
-    text-align: center;
-    display: block;
-    z-index: 1000;
-    position: relative;
-    margin-top: 20px;
-    /* Frame removed */
-}
-
-#message {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #00ff88;
-    text-align: center;
-    display: none;
-}
-
-.wallet {
-    font-weight: bold;
-    color: #00ff88;
-}
-
-.floating-icons, .global-floating-icons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.floating-icons .icon, .global-floating-icons .icon {
-    position: absolute;
-    opacity: 0.7;
-    transition: transform 0.3s;
-    animation: float 6s infinite;
-}
-
-.floating-icons .icon:hover, .global-floating-icons .icon:hover {
-    transform: rotateY(20deg) scale(1.1);
-}
-
-.floating-icons .icon:nth-child(1) { animation-delay: 0s; left: 10%; top: 20%; }
-.floating-icons .icon:nth-child(2) { animation-delay: 1s; left: 30%; top: 30%; }
-.floating-icons .icon:nth-child(3) { animation-delay: 2s; left: 50%; top: 40%; }
-.floating-icons .icon:nth-child(4) { animation-delay: 3s; left: 70%; top: 50%; }
-.floating-icons .icon:nth-child(5) { animation-delay: 4s; left: 85%; top: 60%; }
-.floating-icons .icon:nth-child(6) { animation-delay: 5s; left: 15%; top: 70%; }
-
-.global-floating-icons i.quan:nth-child(1) { animation-delay: 0s; left: 15%; top: 25%; }
-.global-floating-icons i.quan:nth-child(2) { animation-delay: 1s; left: 30%; top: 35%; }
-.global-floating-icons i.quan:nth-child(3) { animation-delay: 2s; left: 45%; top: 45%; }
-.global-floating-icons i.quan:nth-child(4) { animation-delay: 3s; left: 60%; top: 55%; }
-.global-floating-icons i.quan:nth-child(5) { animation-delay: 4s; left: 20%; top: 60%; }
-.global-floating-icons i.quan:nth-child(6) { animation-delay: 5s; left: 40%; top: 70%; }
-.global-floating-icons i.quan:nth-child(7) { animation-delay: 6s; left: 55%; top: 30%; }
-.global-floating-icons i.quan:nth-child(8) { animation-delay: 7s; left: 75%; top: 40%; }
-.global-floating-icons i.quan:nth-child(9) { animation-delay: 8s; left: 25%; top: 50%; }
-.global-floating-icons i.quan:nth-child(10) { animation-delay: 9s; left: 50%; top: 65%; }
-.global-floating-icons i.quan:nth-child(11) { animation-delay: 10s; left: 70%; top: 55%; }
-.global-floating-icons i.quan:nth-child(12) { animation-delay: 11s; left: 35%; top: 75%; }
-.global-floating-icons i.quan:nth-child(13) { animation-delay: 12s; left: 60%; top: 45%; }
-
-.availability-box {
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.token-boxes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-.coins .token-box, .tokens .token-box {
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    color: #00ff88;
-    text-shadow: 0 0 5px #00ff88;
-    transform-style: preserve-3d;
-    white-space: nowrap;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-    color: #00ff88;
-    text-shadow: 0 0 10px #00ff88;
-    font-weight: bold;
-    text-transform: lowercase;
-    text-align: center;
-}
-
-p {
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-.faq-item {
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #00ff88;
-}
-
-.faq-item h3 {
-    margin: 0 0 10px;
-    color: #00ff88;
-    text-shadow: 0 0 5px #00ff88;
-    text-transform: lowercase;
-    text-align: center;
-}
-
-.contact-button {
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: inline-block;
-    transform-style: preserve-3d;
-    text-align: center;
-    position: relative;
-    margin: 10px 0;
-}
-
-.contact-button.three-d-button {
-    transform: perspective(500px) translateZ(0);
-    background: #00cc66;
-    color: #000;
-}
-
-.contact-button.three-d-button:hover {
-    transform: perspective(500px) translateZ(20px) rotateX(10deg);
-    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.5);
-}
-
-.contact-button.three-d-button:active {
-    transform: perspective(500px) translateZ(0) rotateX(0deg);
-}
-
-footer {
-    background: rgba(15, 15, 26, 0.9);
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #00ff88;
-    width: 100%;
-}
-
-/* Animation for floating effect */
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotateX(0deg); }
-    50% { transform: translateY(-20px) rotateX(15deg); }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-        max-width: 90%;
-    }
-    .token-boxes {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .token-box {
-        font-size: 1rem;
-        padding: 10px 20px;
-        margin: 5px;
-    }
-    .three-d-button {
-        font-size: 1rem;
-        padding: 8px 15px;
-    }
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .generator {
-        padding: 15px;
-        max-width: 90%;
-        margin: 20px auto;
-    }
-    #generator-message, #message {
-        font-size: 1rem;
-    }
-    #amount {
-        width: 100%;
-        max-width: 150px;
-        margin: 10px auto;
-    }
-    #generate-button {
-        width: 100%;
-        max-width: 150px;
-        margin: 10px auto;
-    }
-    .contact-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-    .availability-box {
-        max-width: 90%;
-    }
-}
+        generateButton.addEventListener('click', () => {
+            const amount = parseInt(amountInput.value);
+            if (amount >= 10000) {
+                timerElement.style.display = 'block';
+                paymentConfirmation.style.display = 'block';
+                clearInterval(timer);
+                timeLeft = 600;
+                timer = setInterval(() => {
+                    let minutes = Math.floor(timeLeft / 60);
+                    let seconds = timeLeft % 60;
+                    seconds = seconds < 10 ? '0' + seconds : seconds;
+                    timerElement.textContent = `${minutes}:${seconds} (Amount minimum is 10,000 coins)`;
+                    timeLeft--;
+                    if (timeLeft < 0) {
+                        clearInterval(timer);
+                        timerElement.textContent = 'Time Expired (Amount minimum is 10,000 coins)';
+                    }
+                }, 1000);
+            } else {
+                generatorMessage.textContent = 'Minimum amount must be 10,000 coins or more.';
+                timerElement.style.display = 'none';
+                paymentConfirmation.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
